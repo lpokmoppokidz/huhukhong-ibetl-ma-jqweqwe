@@ -7,12 +7,12 @@ $border-radius: 25px;
 $transition: all 0.4s ease;
 
 // Import mixins
-@import "mixins.scss";
+@import 'mixins.scss';
 
 // Import split components
-@import "logo.scss";
-@import "search.scss";
-@import "auth.scss";
+@import 'logo.scss';
+@import 'search.scss';
+@import 'auth.scss';
 
 // Header component
 .header {

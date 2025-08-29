@@ -1,4 +1,4 @@
-@import "variables.scss";
+@import 'variables.scss';
 
 @mixin gradient-bg {
   background: linear-gradient(135deg, $primary, $secondary);

@@ -1,0 +1,9 @@
+.grid {
+  display: grid;
+  width: 100%;
+  
+  .grid-item {
+    // Default styles for grid items
+    // These can be overridden with itemClassName prop
+  }
+}
