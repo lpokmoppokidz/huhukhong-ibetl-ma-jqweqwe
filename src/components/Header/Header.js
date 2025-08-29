@@ -1,7 +1,12 @@
 import React from 'react'
-import './Header.scss'
+import './style/Header.scss'
 import { FaSearch } from 'react-icons/fa'
+import Button from '../Button/Button'
 const Header = () => {
+  const dataAuth=[
+    {text:"login", class:"auth__btn auth__btn--login", id:"loginBtn"},
+    {text:"signup", class:"auth__btn auth__btn--signup", id:"signupBtn"}
+  ]
   return (
     <div className="header">
       <a href="#" className="header__logo">
@@ -18,16 +23,15 @@ const Header = () => {
           />
           
           <FaSearch className='search__icon'/>
-          <button className="search__btn" id="searchBtn">Search</button>
+          <Button name="search__btn" id="searchBtn" text="Search" />
         </div>
       </div>
       <div className="header__auth">
-        <a href="#" className="auth__btn auth__btn--login" id="loginBtn">
-          Login
+        {dataAuth.map((item, index) => (
+        <a className={item.class} id={item.id} key={item.id}>
+          {item.text}
         </a>
-        <a href="#" className="auth__btn auth__btn--signup" id="signupBtn">
-          Sign Up
-        </a>
+))}
       </div>
     </div>
   )

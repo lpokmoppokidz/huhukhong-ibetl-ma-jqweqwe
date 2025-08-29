@@ -1,5 +1,5 @@
 import React from 'react'
-import './Category.scss'
+import "./style/Category.scss"
 const Categeory = () => {
   // Category data
   const categories = [
