@@ -1,0 +1,16 @@
+@import "variables.scss";
+
+@mixin gradient-bg {
+  background: linear-gradient(135deg, $primary, $secondary);
+}
+
+@mixin glass-effect {
+  background: rgba($white, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba($white, 0.2);
+}
+
+@mixin card-hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba($primary, 0.15);
+}

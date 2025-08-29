@@ -1,0 +1,44 @@
+@import "mixins.scss";
+
+// Auth section
+.header__auth {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+
+  .auth {
+    &__btn {
+      padding: 0.6rem 1.5rem;
+      border-radius: $border-radius;
+      text-decoration: none;
+      font-weight: 500;
+      transition: $transition;
+      border: 2px solid transparent;
+      font-size: 0.95rem;
+
+      &--login {
+        color: $text-dark;
+        background: transparent;
+        border-color: rgba($text-dark, 0.2);
+
+        &:hover {
+          background: rgba($primary-color, 0.1);
+          border-color: $primary-color;
+          color: $primary-color;
+          transform: translateY(-1px);
+        }
+      }
+
+      &--signup {
+        @include gradient-bg;
+        color: $white;
+        box-shadow: 0 2px 10px rgba($primary-color, 0.3);
+
+        &:hover {
+          transform: translateY(-2px);
+          box-shadow: 0 6px 20px rgba($primary-color, 0.4);
+        }
+      }
+    }
+  }
+}

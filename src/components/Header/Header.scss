@@ -1,0 +1,53 @@
+$primary-color: #667eea;
+$secondary-color: #764ba2;
+$text-dark: #333;
+$text-light: #666;
+$white: #fff;
+$border-radius: 25px;
+$transition: all 0.4s ease;
+
+// Import mixins
+@import "mixins.scss";
+
+// Import split components
+@import "logo.scss";
+@import "search.scss";
+@import "auth.scss";
+
+// Header component
+.header {
+  @include glass-effect;
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+// Responsive design
+@media (max-width: 768px) {
+  .header {
+    padding: 1rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+
+    &__search {
+      order: 3;
+      flex-basis: 100%;
+      margin: 0;
+      max-width: none;
+    }
+
+    &__auth {
+      gap: 0.5rem;
+
+      .auth__btn {
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
+      }
+    }
+  }
+}

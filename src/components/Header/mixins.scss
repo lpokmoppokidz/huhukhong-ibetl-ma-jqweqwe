@@ -1,0 +1,15 @@
+// Mixins
+@mixin gradient-bg {
+  background: linear-gradient(135deg, $primary-color, $secondary-color);
+}
+
+@mixin glass-effect {
+  background: rgba($white, 0.95);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba($white, 0.2);
+}
+
+@mixin button-hover {
+  transform: translateY(1px);
+  box-shadow: 0 4px 15px rgba($primary-color, 0.4);
+}
